@@ -27,16 +27,16 @@ the tests pass (hopefully you're used to [TDD](https://en.wikipedia.org/wiki/Tes
 
 > What are the contracts i am going to implement?
 
-There should be implemented one single contract- `contracts/Voting.sol`
+There should be implemented one single contract: `contracts/Voting.sol`
 
-> What are `stage`s? What are the differences between them?
+> What are `stages`? What are the differences between them?
 
 Stages are basically the code&concepts complexity.
 For example: the simplest stage would be `stage1`. It's very basic and the only one which is required.
 You're free to extend and implement `stage2`, which will improve your knowledge of Solidity and blockchain concepts.
 
 The special stage designed for Jedi's is the `stage3`. If this is quite easy for you- we will
-be glad provide you a very special, personalized, unique and amazingly interesting task ;)
+be glad to provide you a very special, personalized, unique and amazingly interesting task ;)
 
 ## Validation
 
