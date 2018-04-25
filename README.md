@@ -15,7 +15,7 @@ cd workshop_0x0_seed/
 npm install
 ```
 
-## Task
+## The Task
 
 > What's it about?
 
