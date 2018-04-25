@@ -6,10 +6,13 @@ Seed project for the "Workshop 0x0".
 
 - [ ] Git
 - [ ] NodeJS >=8.x (We recommend using [nvm](https://github.com/creationix/nvm#installation))
+- [ ] [ganache-cli](https://www.npmjs.com/package/ganache-cli)
+- [ ] [truffle](https://www.npmjs.com/package/truffle)
 
 ## Installation
 
 ```bash
+# npm install -g ganache-cli truffle
 git clone https://github.com/blockchaindevelopersmd/workshop_0x0_seed.git
 cd workshop_0x0_seed/
 npm install
@@ -43,17 +46,17 @@ be glad to provide you a very special, personalized, unique and amazingly intere
 Start Test RPC:
 
 ```bash
-npm run testrpc
+ganache-cli --accounts 35
 ```
 
 Run tests:
 
 ```bash
-truffle test:stage1
+STAGE=1 truffle test --network development
 # or
-truffle test:stage2
+STAGE=2 truffle test --network development
 # or
-truffle test:stage3
+STAGE=3 truffle test --network development
 ```
 
 ## Deployment

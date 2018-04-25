@@ -6,12 +6,6 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "testrpc": "ganache-cli --accounts 35",
-    "test:stage1": "STAGE=1 truffle test --network development",
-    "test:stage2": "STAGE=2 truffle test --network development",
-    "test:stage3": "STAGE=3 truffle test --network development"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blockchaindevelopersmd/workshop_0x0_seed.git"
@@ -33,6 +27,6 @@
   },
   "peerDependencies": {
     "truffle": "^4.1.7",
-    "ganache-cli": ""
+    "ganache-cli": "^6.1.0"
   }
 }
