@@ -21,7 +21,7 @@ if (stage >= 3) STAGE |= STAGE3;
 const Stage = {
   Scheduled: '0',
   Running: '1',
-  Finished: '2',
+  Finished: '2'
 };
 
 /** Tests */

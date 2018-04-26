@@ -1,5 +1,4 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const mnemonic = process.env.MNEMONIC;
 
 module.exports = {
   networks: {
@@ -11,10 +10,10 @@ module.exports = {
     },
     ropsten: {
       provider() {
-        return new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/metamask');
+        return new HDWalletProvider(process.env.MNEMONIC, 'https://ropsten.infura.io/metamask');
       },
-      network_id: 3,
-      gas: 4600000
+      gas: 4600000,
+      network_id: 3
     }
   }
 };
