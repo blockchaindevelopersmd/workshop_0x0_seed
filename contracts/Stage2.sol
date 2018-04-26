@@ -1,24 +1,22 @@
 pragma solidity ^0.4.23;
 
-import '../node_modules/zeppelin-solidity/contracts/math/SafeMath.sol';
-
 contract Stage2 {
-  using SafeMath for uint256;
+  enum Stage { Scheduled, Running, Finished }
 
-  enum Stage { Scheduled, Running, Ended }
-
-  uint256 public startTime;
-  uint256 public endTime;
+  uint public startTime;
+  uint public endTime;
   Stage public stage = Stage.Scheduled;
 
-  constructor(uint256 _startTime, uint256 _endTime) public {
-    require(_startTime >= now);
-    require(_endTime > _startTime);
+  constructor(uint _startTime, uint _endTime) public {
+    require(_startTime >= now, 'Start time cannot be in past');
+    require(_endTime > _startTime, 'End time have to be bigger that start time');
 
     startTime = _startTime;
     endTime = _endTime;
   }
 
-  function canVote() view public returns (bool);
-  function hasEnded() view public returns (bool);
+  modifier whileRunning() {
+    require(stage == Stage.Running, 'You can only vote while running');
+    _;
+  }
 }

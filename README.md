@@ -6,7 +6,7 @@ Seed project for the "Workshop 0x0".
 
 - [ ] Git
 - [ ] NodeJS >=8.x (We recommend using [nvm](https://github.com/creationix/nvm#installation))
-- [ ] [ganache-cli](https://www.npmjs.com/package/ganache-cli)
+- [ ] [ganache](https://github.com/trufflesuite/ganache/releases) or [ganache-cli](https://www.npmjs.com/package/ganache-cli)
 - [ ] [truffle](https://www.npmjs.com/package/truffle)
 
 ## Installation
@@ -43,21 +43,31 @@ be glad to provide you a very special, personalized, unique and amazingly intere
 
 ## Validation
 
-Start Test RPC:
+Start Test RPC using `ganache-cli`:
 
 ```bash
-ganache-cli --accounts 35
+ganache-cli --accounts 50
 ```
+
+Start Test RPC using `ganache`:
+
+1. Open application
+2. Go to settings
+3. Select `ACCOUNT&KEYS`
+4. Set `TOTAL ACCOUNTS TO GENERATE` value to 50
 
 Run tests:
 
 ```bash
-STAGE=1 truffle test --network development
+STAGE=1 truffle test --network development --compile-all
 # or
-STAGE=2 truffle test --network development
+STAGE=2 truffle test --network development --compile-all
 # or
-STAGE=3 truffle test --network development
+STAGE=3 truffle test --network development --compile-all
 ```
+
+> If you want to log communication between `truffle test` and `ganache-cli`
+> add `--verbose-rpc` option.
 
 ## Deployment
 

@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/blockchaindevelopersmd/workshop_0x0_seed#readme",
   "dependencies": {
+    "faker": "^4.1.0",
+    "pify": "^3.0.0",
     "truffle-hdwallet-provider": "0.0.3",
+    "truffle-test-utils": "^0.1.0",
     "zeppelin-solidity": "^1.8.0"
   },
   "peerDependencies": {
