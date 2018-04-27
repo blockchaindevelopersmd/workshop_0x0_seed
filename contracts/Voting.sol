@@ -14,7 +14,7 @@ contract Voting is
   constructor(bytes32[] proposalsNames)
     Stage1(
       'Blockchain Developers Moldova', // name
-      'https://m.facebook.com/groups/592057231174722', // website
+      'https://www.facebook.com/groups/592057231174722', // website
       'https://avatars3.githubusercontent.com/u/38734481', // logo
       proposalsNames // available proposals
     )
